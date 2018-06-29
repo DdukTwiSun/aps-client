@@ -9,9 +9,12 @@
 </head>
 <body>
 <header>
-    <nav id="navbar">
-        <p style="padding: 10px 30px; color:white;"> Translated Page </p>
-    </nav>
+    <div id="navbar-container">
+        <nav id="navbar">
+            <p style="padding: 10px 30px; color:white;"> Translated Page 
+            </p>
+        </nav>
+    </div>
 </header>
     <div id="main_section">
         <div id="section1">
@@ -30,17 +33,6 @@
             </div>
             <div class="trans_button">
                 <button id="show_btn" onclick=add()> 인식된 텍스트 표시 </button>
-                <div id="loading">
-                    <div id="loading_1" class="loading"></div>
-                    <div id="loading_2" class="loading"></div>
-                    <div id="loading_3" class="loading"></div>
-                    <div id="loading_4" class="loading"></div>
-                    <div id="loading_5" class="loading"></div>
-                    <div id="loading_6" class="loading"></div>
-                    <div id="loading_7" class="loading"></div>
-                    <div id="loading_8" class="loading"></div>
-                </div>
-
                 <div class="card1">
 
                     <div class="gradient element1"></div>
@@ -56,7 +48,7 @@
             </div>
         </div>
     </div>
-    <script src="base.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="base.js"></script>
 </body>
 </html>
