@@ -142,7 +142,7 @@ $(document).ready(function(){
         $('.floating-box').html(data.TranslatedText);
       });
 
-    }, 1000);
+    }, 500);
 
   });
 
