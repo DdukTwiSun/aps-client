@@ -20,9 +20,6 @@ div {
     margin: 0;
     padding: 0;
 }
-#main_section{
-    margin-top: 2px;
-}
 div > #section1 {
     float: left;
     width: 60%;
@@ -40,7 +37,9 @@ div > #section2 {
     padding: 5px;
     background: linear-gradient(#73caff, #429cd3);
     box-shadow: inset 3px -8px 11px 1px #b7b9bf;
+    /*filter: contrast(130%),brightness(50%);*/      
 }
+
 /*div
 > #section2 > #trans_section{
     margin: 150px 5px 5px;
@@ -199,7 +198,7 @@ div > #section2 {
 ::-webkit-scrollbar-thumb
 {
     border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    border: 1.5px solid #0055FF;
 }
 
 .ocr > ::-webkit-scrollbar-track
