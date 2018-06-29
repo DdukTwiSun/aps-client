@@ -10,7 +10,6 @@ $(() => {
 
 });
 
-
 function add() {
             $('.floating-box').addClass('animated fadeInLeft')
             setTimeout("remove()", 1000);
@@ -29,4 +28,28 @@ function getUrlVar(key){
 function loadOcrData() {
   let key = getUrlVar('file_id');
 	return JSON.parse(localStorage.getItem(key))
+}
+
+const translateApiUrl = 'http://openhack.make.codes/translate';
+function translate(text, targetLang, callback) {
+  $.post(
+    translateApiUrl,
+    {
+      target: targetLang,
+      text: text
+    },
+    callback
+  )
+}
+
+var jsonData = loadOcrData();
+function makeImage(){
+    console.log(jsonData);
+
+    for(let i=0; i<jsonData.pages.length; i++){
+        let image = jsonData.pages[i].image;
+        let imgDom = $('<img/>');
+        imgDom.attr('src', image);
+        $('#pdf-image').append(imgDom);
+    }
 }
