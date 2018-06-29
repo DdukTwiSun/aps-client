@@ -28,3 +28,16 @@ function loadOcrData() {
   let key = getUrlVar('file_id');
 	return JSON.parse(localStorage.getItem(key))
 }
+
+const translateApiUrl = 'http://openhack.make.codes/translate';
+function translate(text, targetLang, callback) {
+  $.post(
+    translateApiUrl,
+    {
+      target: targetLang,
+      text: text
+    },
+    callback
+  )
+}
+
