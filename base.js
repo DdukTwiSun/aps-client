@@ -43,7 +43,7 @@ function translate(text, targetLang, callback) {
 }
 
 
-var jsonData = loadOcrData();
+let jsonData = loadOcrData();
 function makeImage(){
   $('#pdf-image').html('');
 
@@ -110,3 +110,6 @@ function makeImage(){
 }
 
 $(window).resize(makeImage);
+$(document).ready(function(){
+    makeImage();
+});
