@@ -78,7 +78,6 @@ function makeImage(){
         });*/
 
         $('#pdf-image > img').maphilight();
-        $('#pdf-image').imageMapResize();
 
     }
 }
