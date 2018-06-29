@@ -30,3 +30,13 @@ function add() {
             $('.floating-box').removeClass('animated fadeInLeft');
 
         }
+
+function getUrlVar(key){
+	var result = new RegExp(key + "=([^&]*)", "i").exec(window.location.search); 
+	return result && unescape(result[1]) || ""; 
+}
+
+function loadOcrData() {
+  let key = getUrlVar('file_id');
+	return JSON.parse(localStorage.getItem(key))
+}
