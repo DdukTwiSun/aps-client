@@ -34,7 +34,7 @@ div {
     transition: top 0.3s;
 }
 #fileupload{
-    display: block;
+    display: none;
     margin: 50px auto;
     border-style: inset;
 }
@@ -66,6 +66,10 @@ div {
     background-position: center;
     background-size: contain;
     margin: 50px auto; 
+}
+#add-button:hover {
+    transform: scale(1.1);
+
 }
 @-webkit-keyframes BgGradient {
     0%{background-position:0% 50%}

@@ -24,4 +24,9 @@ $(() => {
     }
 
   });
+
+  $("#add-button").on('click', () => {
+    console.log('#add-button');
+    $('#fileupload').click();
+  }) 
 });
