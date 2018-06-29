@@ -4,6 +4,7 @@
   "description": "FRONTEND",
   "scripts": {
     "start": "live-server",
+    "start:electron": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +18,11 @@
   },
   "homepage": "https://github.com/DdukTwiSun/Client#readme",
   "devDependencies": {
+    "electron": "^2.0.3",
+    "electron-build": "0.0.3",
     "live-server": "^1.2.0"
+  },
+  "build": {
+    "appId": "io.openhack.aps"
   }
 }
