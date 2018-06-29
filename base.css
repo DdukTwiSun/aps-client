@@ -26,12 +26,14 @@ div {
 div > #section1 {
     float: left;
     width: 60%;
+    z-index: 2;
 }
 div > #section2 {
     position: absolute;
     padding: 1px;
     right: 0;
     width: 40%;
+    z-index: 1;
 }
 /*div 
 > #section2 > #trans_section{
@@ -60,7 +62,6 @@ div > #section2 {
     height: 250px;
     width: 38%;
     padding: 3px;
-    z-index: 100;
     position: fixed;
 }
 .floating-box a {
@@ -81,14 +82,6 @@ div > #section2 {
     width: 40%;
     font-size: 14px;
 }
-/*#navbar {
-    background-color: rgba(03, 03, 03, 0);
-    position: fixed;
-    top: 0; 
-    width: 100%;
-    transition: top 0.3s;
-    z-index: 1;
-}*/
 #navbar {
     background-color: rgba(03, 03, 03, 0.5);
     position: relative;
@@ -101,20 +94,6 @@ div > #section2 {
     top:0px;
     position: fixed;
     z-index: 1;
-}
-
-#navbar a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    text-decoration: none;
-}
-
-#navbar a:hover {
-    background-color: #ddd;
-    color: black;
 }
 
 .card1 {
