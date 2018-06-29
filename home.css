@@ -103,10 +103,12 @@ div {
     background-position: center;
     background-size: contain;
     margin: 50px auto;
-    transition: transform 0.3s; 
+    transition: transform 0.3s, filter 0.3s;
 }
 .subbg.in{
     transform: scale(1.04);
+    filter: brightness(300%);
+    background-image: url(./designFile/homeafter_bg_1.png);
 }
 #add-button:hover {
     transform: scale(1.1);

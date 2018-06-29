@@ -95,7 +95,10 @@ div > #section2 {
     position: fixed;
     z-index: 1;
 }
-
+#navbar > img {
+    height: 35px;
+    padding: 10px 20px;
+}
 .card1 {
     width: 328px;
     height: 208px;
