@@ -34,12 +34,10 @@ div > #section1 {
 div > #section2 {
     position: fixed;
     right: 0;
-    width: 38%;
+    width: 38.7%;
     height: 100%;
     z-index: 1;
     padding: 5px;
-    /*border-color: #333333;
-    border-left: 5px solid;*/
     background: linear-gradient(#73caff, #429cd3);
     box-shadow: inset 3px -8px 11px 1px #b7b9bf;
 }
@@ -168,6 +166,13 @@ div > #section2 {
 
 .ocr {
 }
+#ocr-textarea {
+    background: transparent;
+    border-radius: 20px;
+    border: 2px solid white;
+    color: white;
+    padding: 20px;
+}
 .GoHome{
     margin-right: 20px;
 }
@@ -184,26 +189,28 @@ div > #section2 {
 /*스크롤 CSS*/
 ::-webkit-scrollbar-track
 {
-    -webkit-box-shadow: inset 0 0 0 0;
-    background-color: #FFFFFF;
+    -webkit-box-shadow: inset 0 0 6px #ffffff;
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar
 {
-    width: 10px;
-    background-color: #F5F5F5;
+    width: 5px;
 }
 
 ::-webkit-scrollbar-thumb
 {
     border-radius: 10px;
-    border: 1.5px solid #0055FF;
-    /*background-image: -webkit-gradient(linear,*/
-                                       left bottom,
-                                       left top,
-                                       color-stop(0, #0000DB),
-                                       color-stop(0.5, #0055FF),
-                                       color-stop(1, #069AFF));
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+.ocr > ::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+    border-radius: 10px;
+}
+.ocr > ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 0 10px #ffffff;
 }
 /*스크롤 CSS 끝*/
