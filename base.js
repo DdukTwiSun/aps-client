@@ -43,7 +43,7 @@ function translate(text, targetLang, callback) {
 }
 
 
-var jsonData = loadOcrData();
+let jsonData = loadOcrData();
 function makeImage(){
     console.log(jsonData);
 
@@ -77,7 +77,10 @@ function makeImage(){
             $(this).css('background', '');
         });*/
 
-        $('#pdf-image > img').maphilight();
 
     }
 }
+
+$(document).ready(function(){
+    makeImage();
+});
