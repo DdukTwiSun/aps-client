@@ -49,16 +49,51 @@ div {
 }
 .subalign2{
     display: block;
-    margin: auto;
-    padding: 95px;
+    position: absolute;
+    left:150px;
+    top:90px;
     width: 350px;
+    /*opacity: 0;*/
 }
 .subalign3{
     display: block;
     margin: 50px auto;
     width: 150px;
 }
+.dropzonealign1{
+    position: absolute;
+    margin: 50px auto;
+    width: 150px;
+    left: 320px;
+    top: 30px;
+    opacity: 0;
+}
+#drag-box.in .dropzonealign1{
+    position: absolute;
+    margin: 50px auto;
+    width: 150px;
+    left: 320px;
+    top: 30px;
+    opacity: 1;
+}
+.dropzonealign2{
+    position: absolute;
+    margin: 50px auto;
+    width: 90px;
+    left: 170px;
+    top: 60px;
+    opacity: 0;
+}
+#drag-box.in .dropzonealign2{
+    position: absolute;
+    margin: 50px auto;
+    width: 90px;
+    left: 170px;
+    top: 60px;
+    opacity: 1;
+}
 .subbg{
+    position: relative;
     background-image: url(./designFile/homebefore_mid1.png);
     background-repeat: no-repeat;
     width: 636px;
@@ -71,7 +106,10 @@ div {
     transform: scale(1.1);
 }
 #drag-box.in{
-    transform: scale(1.1);
+
+}
+#drag-box.in .subalign2{
+    opacity: 0;
 }
 @-webkit-keyframes BgGradient {
     0%{background-position:0% 50%}
