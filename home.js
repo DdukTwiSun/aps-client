@@ -31,4 +31,20 @@ $(() => {
     $('#fileupload').click();
   })
 
+  $(document).bind('dragover', function (e) {
+      var dropZones = $('#drag-box'),
+          timeout = window.dropZoneTimeout;
+      if (timeout) {
+          clearTimeout(timeout);
+      } else {
+          dropZones.addClass('in');
+      }
+      var hoveredDropZone = $(e.target).closest(dropZones);
+      dropZones.not(hoveredDropZone).removeClass('hover');
+      hoveredDropZone.addClass('hover');
+      window.dropZoneTimeout = setTimeout(function () {
+          window.dropZoneTimeout = null;
+          dropZones.removeClass('in hover');
+      }, 100);
+  });
 });
