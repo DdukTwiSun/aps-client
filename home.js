@@ -11,8 +11,13 @@ window.onscroll = function() {
 
 $(() => {
   $('#fileupload').fileupload({
+    dropZone: $("#drag-box"),
     add: (e, data) => {
       console.log('loading');
+      $(".mainalign").css("opacity", 0);
+      $(".card1").css("opacity", 1);
+      // $(".card1").css("display", "block");
+      $(".card1").css("visibility", "unset");
       data.submit()
     },
     done: (e, data) => {
@@ -23,5 +28,27 @@ $(() => {
       console.log("end");
     }
 
+  });
+
+  $("#add-button").on('click', () => {
+    console.log('#add-button');
+    $('#fileupload').click();
+  })
+
+  $(document).bind('dragover', function (e) {
+      var dropZones = $('#drag-box'),
+          timeout = window.dropZoneTimeout;
+      if (timeout) {
+          clearTimeout(timeout);
+      } else {
+          dropZones.addClass('in');
+      }
+      var hoveredDropZone = $(e.target).closest(dropZones);
+      dropZones.not(hoveredDropZone).removeClass('hover');
+      hoveredDropZone.addClass('hover');
+      window.dropZoneTimeout = setTimeout(function () {
+          window.dropZoneTimeout = null;
+          dropZones.removeClass('in hover');
+      }, 100);
   });
 });

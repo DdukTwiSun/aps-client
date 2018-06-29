@@ -33,29 +33,156 @@ div {
     width: 100%;
     transition: top 0.3s;
 }
-#fileupload-container {
+#fileupload{
+    display: none;
+    margin: 50px auto;
+    border-style: inset;
+}
+.mainalign{
+    display: block;
+    margin: 130px auto 0 auto;
+    opacity: 1;
+    transition: opacity 1s;
+}
+.subalign1{
+    display: block;
+    margin: 50px auto;
+    width: 250px;
+}
+.subalign2{
+    display: block;
+    position: absolute;
+    left:150px;
+    top:90px;
+    width: 350px;
+    /*opacity: 0;*/
+}
+.subalign3{
+    display: block;
+    margin: 50px auto;
+    width: 150px;
+}
+.dropzonealign1{
+    position: absolute;
+    margin: 50px auto;
+    width: 150px;
+    left: 320px;
+    top: 30px;
+    opacity: 0;
+}
+#drag-box.in .dropzonealign1{
+    position: absolute;
+    margin: 50px auto;
+    width: 150px;
+    left: 320px;
+    top: 30px;
+    opacity: 1;
+}
+.dropzonealign2{
+    position: absolute;
+    margin: 50px auto;
+    width: 90px;
+    left: 170px;
+    top: 60px;
+    opacity: 0;
+}
+#drag-box.in .dropzonealign2{
+    position: absolute;
+    margin: 50px auto;
+    width: 90px;
+    left: 170px;
+    top: 60px;
+    opacity: 1;
+}
+.subbg{
+    position: relative;
+    background-image: url(./designFile/homebefore_mid1.png);
+    background-repeat: no-repeat;
+    width: 636px;
+    height: 268px;
+    background-position: center;
+    background-size: contain;
+    margin: 50px auto;
+    transition: transform 0.3s; 
+}
+.subbg.in{
+    transform: scale(1.04);
+}
+#add-button:hover {
+    transform: scale(1.1);
+}
+#drag-box.in .subalign2{
+    opacity: 0;
+}
 
+/*로딩페이지 CSS*/
+
+.card1 {
     position: absolute;
     top: 0px;
     left: 0px;
-    bottom: 0px;
     right: 0px;
-    text-align: center;
-    vertical-align:middle; 
-    display:table-cell;
+
+    width: 328px;
+    height: 208px;
+    margin: 230px auto;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: 1s;
+    /*display: none;*/
+    visibility: hidden;
 }
-#fileupload{
-    display: inline-block;
-    border: 5px;
+.element1 {
+    top: 58px;
+    left: 100px;
+    height: 14px;
+    width: 130px;
+    margin-bottom: 13.5px;
 }
-.bgpng{
-    background: url("./designFile/mainbg.png");
-    background-size: cover;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    bottom: 60px;
+.element2 {
+    top: 58px;
+    left: 100px;
+    height: 14px;
+    width: 130px;
+    animation-delay: 1.2s;
+    margin-bottom: 13.5px;
 }
+.element3 {
+    top: 58px;
+    left: 100px;
+    height: 14px;
+    width: 80px;
+    animation-delay: 2.4s;
+}
+.elealign{
+    margin-left:30px;
+}
+.gradient {
+    border-radius: 5px;
+    box-shadow: 0 3px 1px rgba(0,0,0,0.15);
+    transition: box-shadow 0.3s ease-in-out;
+    animation-duration: 7.2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #76daff 8%, #76daff 38%, #fafafa 54%);
+    background-size: 1000px 640px;
+    position: relative;
+}
+
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}
+
+/*로딩 페이지 CSS 끝*/
 @-webkit-keyframes BgGradient {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
