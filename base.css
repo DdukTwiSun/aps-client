@@ -200,7 +200,7 @@ div > #section2 {
 ::-webkit-scrollbar-thumb
 {
     border-radius: 10px;
-    border: 1.5px solid #0055FF;
+    /*border: 1.5px solid #0055FF;*/
 }
 
 .ocr > ::-webkit-scrollbar-track
