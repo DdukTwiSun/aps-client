@@ -51,7 +51,10 @@ div > #section2 {
 
 .annotation {
   position: absolute;
+}
 
+.annotation.selected {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .annotation:hover {

@@ -44,6 +44,8 @@ function translate(text, targetLang, callback) {
 
 
 let jsonData = loadOcrData();
+
+let selectedAnnotationDom = null;
 function makeImage(){
   $('#pdf-image').html('');
 
@@ -101,6 +103,12 @@ function makeImage(){
 
         imgDiv.append(mark);
         mark.on('click', function () {
+            if (selectedAnnotationDom) {
+              selectedAnnotationDom.removeClass('selected');
+            }
+
+            selectedAnnotationDom = mark;
+            mark.addClass('selected');
             console.log(ocr);
             //$('.floating-box').html(ocr.text);
             translate(ocr.text, 'ko', function (data) {
