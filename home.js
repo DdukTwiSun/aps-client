@@ -14,8 +14,10 @@ $(() => {
     dropZone: $("#drag-box"),
     add: (e, data) => {
       console.log('loading');
-      $(".mainalign").css("display", "none");
-      $(".card1").css("display", "block");
+      $(".mainalign").css("opacity", 0);
+      $(".card1").css("opacity", 1);
+      // $(".card1").css("display", "block");
+      $(".card1").css("visibility", "unset");
       data.submit()
     },
     done: (e, data) => {

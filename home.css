@@ -40,7 +40,9 @@ div {
 }
 .mainalign{
     display: block;
-    margin: 130px auto;
+    margin: 130px auto 0 auto;
+    opacity: 1;
+    transition: opacity 1s;
 }
 .subalign1{
     display: block;
@@ -100,7 +102,11 @@ div {
     height: 268px;
     background-position: center;
     background-size: contain;
-    margin: 50px auto; 
+    margin: 50px auto;
+    transition: transform 0.3s; 
+}
+.subbg.in{
+    transform: scale(1.04);
 }
 #add-button:hover {
     transform: scale(1.1);
@@ -113,14 +119,19 @@ div {
 
 .card1 {
     position: absolute;
+    top: 0px;
     left: 0px;
     right: 0px;
 
     width: 328px;
     height: 208px;
-    margin: 310px auto;
+    margin: 230px auto;
     border-radius: 2px;
-    display: none;
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: 1s;
+    /*display: none;*/
+    visibility: hidden;
 }
 .element1 {
     top: 58px;
