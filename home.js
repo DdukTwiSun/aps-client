@@ -11,6 +11,7 @@ window.onscroll = function() {
 
 $(() => {
   $('#fileupload').fileupload({
+    dropZone: $("#drag-box"),
     add: (e, data) => {
       console.log('loading');
       data.submit()
@@ -28,5 +29,6 @@ $(() => {
   $("#add-button").on('click', () => {
     console.log('#add-button');
     $('#fileupload').click();
-  }) 
+  })
+
 });
