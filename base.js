@@ -100,6 +100,15 @@ function makeImage(){
         mark.css('height', pos.height);
 
         imgDiv.append(mark);
+        mark.on('click', function () {
+            console.log(ocr);
+            //$('.floating-box').html(ocr.text);
+            translate(ocr.text, 'ko', function (data) {
+                console.log(data);
+                $('.floating-box').html(data.TranslatedText);
+            })
+        });
+
       }
 
     });
