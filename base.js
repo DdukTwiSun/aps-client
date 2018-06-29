@@ -20,17 +20,6 @@ $(() => {
 
 });
 
-
-function add() {
-            $('.floating-box').addClass('animated fadeInLeft')
-            setTimeout("remove()", 1000);
-
-        }
-        function remove() {
-            $('.floating-box').removeClass('animated fadeInLeft');
-
-        }
-
 function getUrlVar(key){
 	var result = new RegExp(key + "=([^&]*)", "i").exec(window.location.search); 
 	return result && unescape(result[1]) || ""; 
@@ -53,3 +42,14 @@ function translate(text, targetLang, callback) {
   )
 }
 
+var jsonData = loadOcrData();
+function makeImage(){
+    console.log(jsonData);
+
+    for(let i=0; i<jsonData.pages.length; i++){
+        let image = jsonData.pages[i].image;
+        let imgDom = $('<img/>');
+        imgDom.attr('src', image);
+        $('#pdf-image').append(imgDom);
+    }
+}
