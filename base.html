@@ -6,23 +6,12 @@
 
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="animate.css/animate.css">
-
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script>
-        function add() {
-            $('.floating-box').addClass('animated fadeInLeft')
-            setTimeout("remove()", 1000);
-
-        }
-        function remove() {
-            $('.floating-box').removeClass('animated fadeInLeft');
-
-        }
-    </script>
 </head>
 <body>
 <header>
-    <p> Translated Page </p>
+    <nav id="navbar">
+        <p style="padding: 10px 30px;"> Translated Page </p>
+    </nav>
 </header>
     <div id="main_section">
         <div id="section1">
@@ -44,5 +33,7 @@
             </div>
         </div>
     </div>
+    <script src="base.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 </body>
 </html>
