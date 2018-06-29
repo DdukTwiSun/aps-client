@@ -78,7 +78,7 @@ div > #section2 {
 }
 
 .floating-box {
-    font-family: sans-serif;
+    font-family: NotoKrL, serif;
     margin: 150px 100px 5px;
     padding: 3px;
     width: auto;
@@ -214,3 +214,44 @@ div > #section2 {
     -webkit-box-shadow: inset 0 0 0 10px #ffffff;
 }
 /*스크롤 CSS 끝*/
+
+/*본고딕 폰트*/
+@font-face {
+    font-family: 'NotoKrL';
+    font-style: normal;
+    font-weight: 100;
+    src: url('font/notokr-light.eot');
+    src: url('font/notokr-light.eot?#iefix') format('embedded-opentype'),
+    url('font/notokr-light.woff2') format('woff2'),
+    url('font/notokr-light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'NotoKrR';
+    font-style: normal;
+    font-weight: 300;
+    src: url('font/notokr-regular.eot');
+    src: url('font/notokr-regular.eot?#iefix') format('embedded-opentype'),
+    url('font/notokr-regular.woff2') format('woff2'),
+    url('font/notokr-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'NotoKrM';
+    font-style: normal;
+    font-weight: 500;
+    src: url('font/notokr-medium.eot');
+    src: url('font/notokr-medium.eot?#iefix') format('embedded-opentype'),
+    url('font/notokr-medium.woff2') format('woff2'),
+    url('font/notokr-medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'NotoKrB';
+    font-style: normal;
+    font-weight: 700;
+    src: url('font/notokr-bold.eot');
+    src: url('font/notokr-bold.eot?#iefix') format('embedded-opentype'),
+    url('font/notokr-bold.woff2') format('woff2'),
+    url('font/notokr-bold.woff') format('woff');
+}
