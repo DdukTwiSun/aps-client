@@ -81,24 +81,24 @@ div > #section2 {
     width: 40%;
     font-size: 14px;
 }
-#navbar {
-    background-color: rgba(03, 03, 03, 0.5);
+/*#navbar {
+    background-color: rgba(03, 03, 03, 0);
     position: fixed;
     top: 0; 
     width: 100%;
     transition: top 0.3s;
     z-index: 1;
+}*/
+#navbar {
+    background-color: rgba(03, 03, 03, 0.5);
+    position: relative;
+    top: -70px; 
+    width: 100%;
+    transition: top 0.3s;
+    z-index: 1;
 }
-#navbar a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    text-decoration: none;
-}
-
-#navbar a:hover {
-    background-color: #ddd;
-    color: black;
+#navbar-container {
+    top:0px;
+    position: fixed;
+    z-index: 1;
 }
