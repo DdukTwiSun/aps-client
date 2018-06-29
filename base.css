@@ -124,6 +124,7 @@ div > #section2 {
 }
 
 
+
 .element1 {
     top: 58px;
     left: 16px;
@@ -160,6 +161,9 @@ div > #section2 {
     background: linear-gradient(to right, #76daff 8%, #76daff 38%, #fafafa 54%);
     background-size: 1000px 640px;
     position: relative;
+}
+
+.ocr {
 }
 
 @keyframes placeHolderShimmer{

@@ -109,12 +109,13 @@ function makeImage(){
 
             selectedAnnotationDom = mark;
             mark.addClass('selected');
-            console.log(ocr);
+
+            $('#ocr-textarea').val(ocr.text);
             //$('.floating-box').html(ocr.text);
             translate(ocr.text, 'ko', function (data) {
-                console.log(data);
                 $('.floating-box').html(data.TranslatedText);
-            })
+            });
+            
         });
 
       }
@@ -129,4 +130,20 @@ function makeImage(){
 $(window).resize(makeImage);
 $(document).ready(function(){
     makeImage();
+
+  let intervalId = null;
+  $("#ocr-textarea").on('change keyup paste', () => {
+    if (intervalId) {
+      clearTimeout(intervalId);
+    }
+
+    intervalId = setTimeout(() => {
+      translate($('#ocr-textarea').val(), 'ko', function (data) {
+        $('.floating-box').html(data.TranslatedText);
+      });
+
+    }, 1000);
+
+  });
+
 });
