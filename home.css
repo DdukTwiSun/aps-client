@@ -105,12 +105,73 @@ div {
 #add-button:hover {
     transform: scale(1.1);
 }
-#drag-box.in{
-
-}
 #drag-box.in .subalign2{
     opacity: 0;
 }
+
+/*로딩페이지 CSS*/
+
+.card1 {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+
+    width: 328px;
+    height: 208px;
+    margin: 310px auto;
+    border-radius: 2px;
+    display: none;
+}
+.element1 {
+    top: 58px;
+    left: 100px;
+    height: 14px;
+    width: 130px;
+    margin-bottom: 13.5px;
+}
+.element2 {
+    top: 58px;
+    left: 100px;
+    height: 14px;
+    width: 130px;
+    animation-delay: 1.2s;
+    margin-bottom: 13.5px;
+}
+.element3 {
+    top: 58px;
+    left: 100px;
+    height: 14px;
+    width: 80px;
+    animation-delay: 2.4s;
+}
+.elealign{
+    margin-left:30px;
+}
+.gradient {
+    border-radius: 5px;
+    box-shadow: 0 3px 1px rgba(0,0,0,0.15);
+    transition: box-shadow 0.3s ease-in-out;
+    animation-duration: 7.2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #76daff 8%, #76daff 38%, #fafafa 54%);
+    background-size: 1000px 640px;
+    position: relative;
+}
+
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}
+
+/*로딩 페이지 CSS 끝*/
 @-webkit-keyframes BgGradient {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
