@@ -27,15 +27,20 @@ div > #section1 {
     float: left;
     width: 60%;
     z-index: 2;
+    position: fixed;
+    overflow-y: scroll;
+    height: 100%;
 }
 div > #section2 {
-    position: absolute;
+    position: fixed;
     padding: 1px;
     right: 0;
     width: 40%;
     z-index: 1;
+    border-color: #333333;
+    border-left: 5px solid;
 }
-/*div 
+/*div
 > #section2 > #trans_section{
     margin: 150px 5px 5px;
     height: 300px;
@@ -44,6 +49,22 @@ div > #section2 {
     line-height: 300px;
     font-weight: bold;
 }*/
+
+.img-container {
+  position: relative;
+}
+
+.annotation {
+  position: absolute;
+}
+
+.annotation.selected {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.annotation:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
 
 #section1 img{
     position: relative;
@@ -57,30 +78,18 @@ div > #section2 {
 
 .floating-box {
     font-family: sans-serif;
-    border: 5px solid greenyellow;
     margin: 150px 5px 5px;
-    height: 250px;
-    width: 38%;
     padding: 3px;
-    position: fixed;
+    /*height: 250px;
+    width: 38%;
+    border: 5px solid greenyellow;
+    position: fixed;*/
 }
 .floating-box a {
     font-size: 13pt;
     display: block;
     margin: 0 0.5em;
     color: black;
-}
-.trans_button {
-    position: fixed;
-    margin: 500px 5px 5px;
-    width: 40%;
-    z-index: 100;
-}
-#show_btn{
-    float: right;
-    padding: 5px;
-    width: 40%;
-    font-size: 14px;
 }
 #navbar {
     background-color: rgba(03, 03, 03, 0.5);
@@ -109,6 +118,7 @@ div > #section2 {
     -moz-box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.08);
     box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.08);
 }
+
 
 
 .element1 {
@@ -147,6 +157,9 @@ div > #section2 {
     background: linear-gradient(to right, #76daff 8%, #76daff 38%, #fafafa 54%);
     background-size: 1000px 640px;
     position: relative;
+}
+
+.ocr {
 }
 
 @keyframes placeHolderShimmer{
