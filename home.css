@@ -1,10 +1,10 @@
 body {
     margin:0px 0px 1px 0px;
-    background: linear-gradient(270deg, #73caff, #429CD3);
+    background: linear-gradient(45deg, #73caff, #429CD3);
     background-size: 400% 400%;
-    -webkit-animation: BgGradient 5s ease infinite;
-    -moz-animation: BgGradient 5s ease infinite;
-    animation: BgGradient 5s ease infinite;
+    -webkit-animation: BgGradient 7s ease infinite;
+    -moz-animation: BgGradient 7s ease infinite;
+    animation: BgGradient 7s ease infinite;
 }
 header{
     padding: 0;
