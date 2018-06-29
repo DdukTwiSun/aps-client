@@ -2,17 +2,9 @@ body {
     margin:0px 0px 1px 0px;
     background: linear-gradient(270deg, #73caff, #429CD3);
     background-size: 400% 400%;
-    -webkit-animation: BgGradient 13s ease infinite;
-    -moz-animation: BgGradient 13s ease infinite;
-    animation: BgGradient 13s ease infinite;
-}
-.bgpng{
-    background: url("./designFile/mainbg.png");
-    background-size: cover;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    bottom: 60px;s
+    -webkit-animation: BgGradient 5s ease infinite;
+    -moz-animation: BgGradient 5s ease infinite;
+    animation: BgGradient 5s ease infinite;
 }
 header{
     padding: 0;
@@ -41,18 +33,28 @@ div {
     width: 100%;
     transition: top 0.3s;
 }
-#navbar a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    text-decoration: none;
-}
+#fileupload-container {
 
-#navbar a:hover {
-    background-color: #ddd;
-    color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    text-align: center;
+    vertical-align:middle; 
+    display:table-cell;
+}
+#fileupload{
+    display: inline-block;
+    border: 5px;
+}
+.bgpng{
+    background: url("./designFile/mainbg.png");
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 60px;
 }
 @-webkit-keyframes BgGradient {
     0%{background-position:0% 50%}
