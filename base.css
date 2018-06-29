@@ -102,3 +102,237 @@ div > #section2 {
     background-color: #ddd;
     color: black;
 }
+
+/**loading
+******************************/
+#loading {
+    position: relative;
+    width: 102px;
+    height: 12px;
+    margin: 10px auto;
+}
+
+.loading {
+    position: absolute;
+    top: 0;
+    background-color: #00a651;
+    width: 12px;
+    height: 12px;
+    animation-name: bounce_loading;
+    -o-animation-name: bounce_loading;
+    -ms-animation-name: bounce_loading;
+    -webkit-animation-name: bounce_loading;
+    -moz-animation-name: bounce_loading;
+    animation-duration: 1.035s;
+    -o-animation-duration: 1.035s;
+    -ms-animation-duration: 1.035s;
+    -webkit-animation-duration: 1.035s;
+    -moz-animation-duration: 1.035s;
+    animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-direction: normal;
+    -o-animation-direction: normal;
+    -ms-animation-direction: normal;
+    -webkit-animation-direction: normal;
+    -moz-animation-direction: normal;
+    transform: scale(0.3);
+    -o-transform: scale(0.3);
+    -ms-transform: scale(0.3);
+    -webkit-transform: scale(0.3);
+    -moz-transform: scale(0.3);
+    border-radius: 8px;
+    -o-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+}
+
+#loading_1 {
+    left: 0;
+    animation-delay: 0.416s;
+    -o-animation-delay: 0.416s;
+    -ms-animation-delay: 0.416s;
+    -webkit-animation-delay: 0.416s;
+    -moz-animation-delay: 0.416s;
+}
+
+#loading_2 {
+    left: 13px;
+    animation-delay: 0.5225s;
+    -o-animation-delay: 0.5225s;
+    -ms-animation-delay: 0.5225s;
+    -webkit-animation-delay: 0.5225s;
+    -moz-animation-delay: 0.5225s;
+}
+
+#loading_3 {
+    left: 25px;
+    animation-delay: 0.619s;
+    -o-animation-delay: 0.619s;
+    -ms-animation-delay: 0.619s;
+    -webkit-animation-delay: 0.619s;
+    -moz-animation-delay: 0.619s;
+}
+
+#loading_4 {
+    left: 38px;
+    animation-delay: 0.7255s;
+    -o-animation-delay: 0.7255s;
+    -ms-animation-delay: 0.7255s;
+    -webkit-animation-delay: 0.7255s;
+    -moz-animation-delay: 0.7255s;
+}
+
+#loading_5 {
+    left: 51px;
+    animation-delay: 0.832s;
+    -o-animation-delay: 0.832s;
+    -ms-animation-delay: 0.832s;
+    -webkit-animation-delay: 0.832s;
+    -moz-animation-delay: 0.832s;
+}
+
+#loading_6 {
+    left: 64px;
+    animation-delay: 0.9385s;
+    -o-animation-delay: 0.9385s;
+    -ms-animation-delay: 0.9385s;
+    -webkit-animation-delay: 0.9385s;
+    -moz-animation-delay: 0.9385s;
+}
+
+#loading_7 {
+    left: 76px;
+    animation-delay: 1.035s;
+    -o-animation-delay: 1.035s;
+    -ms-animation-delay: 1.035s;
+    -webkit-animation-delay: 1.035s;
+    -moz-animation-delay: 1.035s;
+}
+
+#loading_8 {
+    left: 89px;
+    animation-delay: 1.1415s;
+    -o-animation-delay: 1.1415s;
+    -ms-animation-delay: 1.1415s;
+    -webkit-animation-delay: 1.1415s;
+    -moz-animation-delay: 1.1415s;
+}
+
+@keyframes bounce_loading {
+    0% {
+        transform: scale(1);
+        background-color: #00a651;
+    }
+    100% {
+        transform: scale(0.3);
+        background-color: #00a651;
+    }
+}
+
+@-o-keyframes bounce_loading {
+    0% {
+        -o-transform: scale(1);
+        background-color: #00a651;
+    }
+    100% {
+        -o-transform: scale(0.3);
+        background-color: #00a651;
+    }
+}
+
+@-ms-keyframes bounce_loading {
+    0% {
+        -ms-transform: scale(1);
+        background-color: #00a651;
+    }
+    100% {
+        -ms-transform: scale(0.3);
+        background-color: #00a651;
+    }
+}
+
+@-webkit-keyframes bounce_loading {
+    0% {
+        -webkit-transform: scale(1);
+        background-color: #00a651;
+    }
+    100% {
+        -webkit-transform: scale(0.3);
+        background-color: #00a651;
+    }
+}
+
+@-moz-keyframes bounce_loading {
+    0% {
+        -moz-transform: scale(1);
+        background-color: #00a651;
+    }
+    100% {
+        -moz-transform: scale(0.3);
+        background-color: #00a651;
+    }
+}
+
+.card1 {
+    width: 328px;
+    height: 208px;
+    margin: 16px auto;
+    background-color: #76daff;
+    border-radius: 2px;
+    -webkit-box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.08);
+    -moz-box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.08);
+    box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.08);
+}
+
+
+.element1 {
+    top: 58px;
+    left: 16px;
+    height: 14px;
+    width: 130px;
+}
+.element2 {
+    top: 58px;
+    left: 16px;
+    height: 14px;
+    width: 130px;
+    animation-delay: 1.2s;
+}
+
+.element3 {
+    top: 58px;
+    left: 16px;
+    height: 14px;
+    width: 80px;
+    animation-delay: 2.4s;
+}
+
+
+.gradient {
+    border-radius: 5px;
+    box-shadow: 0 3px 1px rgba(0,0,0,0.15);
+    transition: box-shadow 0.3s ease-in-out;
+    animation-duration: 7.2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #76daff 8%, #76daff 38%, #fafafa 54%);
+    background-size: 1000px 640px;
+    position: relative;
+}
+
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}
+
