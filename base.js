@@ -45,39 +45,68 @@ function translate(text, targetLang, callback) {
 
 var jsonData = loadOcrData();
 function makeImage(){
-    console.log(jsonData);
+  $('#pdf-image').html('');
 
-    for(let i=0; i<jsonData.pages.length; i++){
-        let image = jsonData.pages[i].image;
-        let imgDom = $('<img/>');
-        let mapDom = $('<map/>');
-        mapDom.attr('name', 'img-highlight_'+i);
-        mapDom.attr('id', 'img-map_'+i);
-        imgDom.attr('src', image);
-        imgDom.attr('usemap','#img-highlight_'+i);
-        $('#pdf-image').append(imgDom);
-        $('#map-div').append(mapDom);
+  console.log(jsonData);
 
+  for(let i=0; i<jsonData.pages.length; i++){
+    let page = jsonData.pages[i];
+    let image = page.image;
+    let size = page.size;
+    console.log(size)
+    let ocrs = page.ocr;
 
-        for(let j=0; j<jsonData.pages[i].ocr.length; j++){
-            let coords = jsonData.pages[i].ocr[j].bounding_box;
-            let imgMap = $('<area/>');
-            //let mapname = 'img-highlight_'+i;
-            let mapId = '#img-map_'+i;
-            imgMap.attr('shape', 'rect');
-            imgMap.attr('coords', coords.x + ','+ coords.y + ',' +(coords.x+coords.width) + ','+ (coords.y+coords.height));
-            imgMap.attr('href', '#');
-            $('#map-div').find(mapId).append(imgMap);
+    let imgDiv = $('<div/>')
+    let imgDom = $('<img/>');
 
-            //console.log(coords);
-        }
-        /*$('#map-div area').hover(function () {
-            $(this).css('background', 'rgba(255,0,0,0.2)');
-        }, function () {
-            $(this).css('background', '');
-        });*/
+    imgDiv.attr('class', 'img-container');
+    imgDom.attr('src', image);
 
-        $('#pdf-image > img').maphilight();
+    imgDiv.append(imgDom);
 
+    let convertPos = (boundingBox, domWidth, domHeight) => {
+      let x = boundingBox.x;
+      let y = boundingBox.y;
+      let width = boundingBox.width;
+      let height = boundingBox.height;
+
+      x = boundingBox.x / size.width;
+      y = boundingBox.y / size.height;
+      width = boundingBox.width / size.width;
+      height = boundingBox.height / size.width;
+
+      return {
+        x: x * domWidth,
+        y: y * domHeight,
+        width: width * domWidth,
+        height: height * domHeight
+      };
     }
+
+
+    imgDom.on('load', () => {
+      for (let j=0; j<ocrs.length; j++) {
+        let ocr = ocrs[j];
+
+        let pos = convertPos(
+          ocr.bounding_box,
+          imgDom.width(),
+          imgDom.height());
+        let mark = $('<div/>');
+        mark.attr('class', 'annotation')
+        mark.css('top', pos.y);
+        mark.css('left', pos.x);
+        mark.css('width', pos.width);
+        mark.css('height', pos.height);
+
+        imgDiv.append(mark);
+      }
+
+    });
+
+    $("#pdf-image").append(imgDiv);
+
+  }
 }
+
+$(window).resize(makeImage);

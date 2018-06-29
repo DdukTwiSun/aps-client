@@ -45,6 +45,19 @@ div > #section2 {
     font-weight: bold;
 }*/
 
+.img-container {
+  position: relative;
+}
+
+.annotation {
+  position: absolute;
+
+}
+
+.annotation:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 #section1 img{
     position: relative;
     width: 100%;
