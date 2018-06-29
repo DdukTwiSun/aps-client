@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "FRONTEND",
   "scripts": {
+    "start": "live-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -14,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/DdukTwiSun/Client/issues"
   },
-  "homepage": "https://github.com/DdukTwiSun/Client#readme"
+  "homepage": "https://github.com/DdukTwiSun/Client#readme",
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  }
 }
