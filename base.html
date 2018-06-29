@@ -5,6 +5,20 @@
     <title>Translated Page</title>
 
     <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="animate.css/animate.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        function add() {
+            $('.floating-box').addClass('animated fadeInLeft')
+            setTimeout("remove()", 1000);
+
+        }
+        function remove() {
+            $('.floating-box').removeClass('animated fadeInLeft');
+
+        }
+    </script>
 </head>
 <body>
 <header>
@@ -26,7 +40,7 @@
                 <a href="#">box</a>
             </div>
             <div class="trans_button">
-                <button id="show_btn" onclick="alert('test')"> 인식된 텍스트 표시 </button>
+                <button id="show_btn" onclick=add()> 인식된 텍스트 표시 </button>
             </div>
         </div>
     </div>
