@@ -103,12 +103,15 @@ div {
     background-position: center;
     background-size: contain;
     margin: 50px auto;
-    transition: transform 0.3s, filter 0.3s;
+    transition: transform 0.3s,background-image 0.5s;
 }
 .subbg.in{
     transform: scale(1.04);
-    filter: brightness(300%);
+    /*filter: brightness(300%); 혹시 몰라 뺴지마셈*/
     background-image: url(./designFile/homeafter_bg_1.png);
+}
+#add-button {
+    transition: transform 0.3s;
 }
 #add-button:hover {
     transform: scale(1.1);

@@ -195,7 +195,8 @@ div > #section2 {
 ::-webkit-scrollbar-thumb
 {
     border-radius: 10px;
-    background-image: -webkit-gradient(linear,
+    border: 1.5px solid #0055FF;
+    /*background-image: -webkit-gradient(linear,*/
                                        left bottom,
                                        left top,
                                        color-stop(0, #0000DB),
