@@ -175,6 +175,7 @@ div > #section2 {
   bottom: 0px;
   background-color: rgba(30, 30, 30, 0.60);
   mix-blend-mode: overlay;
+  z-index: -1;
 
 }
 
