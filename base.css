@@ -39,7 +39,7 @@ div > #section2 {
     z-index: 1;
     padding: 5px;
     background: linear-gradient(#73caff, #429cd3);
-    box-shadow: inset 3px -8px 11px 1px #b7b9bf;
+    box-shadow: inset 3px -8px 11px 1px rgba(61, 61, 61, 0.4);
 }
 /*div
 > #section2 > #trans_section{
@@ -166,6 +166,18 @@ div > #section2 {
 
 .ocr {
 }
+
+.overlay {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background-color: rgba(30, 30, 30, 0.60);
+  mix-blend-mode: overlay;
+
+}
+
 #ocr-textarea {
     background: transparent;
     border-radius: 20px;
