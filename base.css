@@ -210,7 +210,9 @@ div > #section2 {
     color: white;
     padding: 20px;
 }
-.GoHome{
+.GoHome > img{
+    height: 33px;
+    padding: 10px 20px;
     margin-right: 20px;
 }
 
