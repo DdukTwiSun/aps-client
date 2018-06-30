@@ -166,6 +166,18 @@ div > #section2 {
 
 .ocr {
 }
+
+.overlay {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background-color: rgba(30, 30, 30, 0.60);
+  mix-blend-mode: overlay;
+
+}
+
 #ocr-textarea {
     background: transparent;
     border-radius: 20px;
