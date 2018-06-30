@@ -228,6 +228,7 @@ div > #section2 {
     -webkit-box-sizing: border-box;
 }
 
+
 .ocr:hover {
     transform: scale(1.1);
 }

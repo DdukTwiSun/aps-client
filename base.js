@@ -103,6 +103,8 @@ function makeImage(){
 
         imgDiv.append(mark);
         mark.on('click', function () {
+            $('.ocr').css("height", '');
+            $('.ocr').css("bottom", '');
             if (selectedAnnotationDom) {
               selectedAnnotationDom.removeClass('selected');
             }
@@ -148,8 +150,28 @@ $(document).ready(function(){
 
   });
 
+  let animationInterval;
   $(".ocr").on("click", () => {
-    $(".ocr").addClass("clicked");
+    let ocr = $(".ocr");
+
+    if(animationInterval)
+      clearInterval(animationInterval);
+
+    if (!$('.ocr').hasClass("clicked")) {
+      ocr.addClass("clicked");
+
+      animationInterval = setInterval(() => {
+        let height = ocr.height();
+        if( height > 200) {
+          clearInterval(animationInterval);
+        }
+        ocr.css("height", height + 20);
+        var bottom = ocr.position().top + ocr.height();
+        ocr.css("bottom", -130 - height + 56);
+      }, 1/60 * 1000);
+
+
+    }
 
   });
 
