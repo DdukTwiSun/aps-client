@@ -98,6 +98,7 @@ div > #section2 {
     opacity: 0.9;
     display: block;
     margin: 0 0.5em;
+    text-align: center;
 }
 #navbar {
     background-color: rgba(000, 195, 255, 1);
