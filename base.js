@@ -103,6 +103,8 @@ function makeImage(){
 
         imgDiv.append(mark);
         mark.on('click', function () {
+            $('.floating-box').css('opacity', 0);
+
             $('.ocr').css("height", '');
             $('.ocr').css("bottom", '');
             if (selectedAnnotationDom) {
@@ -117,6 +119,7 @@ function makeImage(){
             $(".ocr").removeClass('clicked');
             $('.ocr').addClass('activated');
             translate(ocr.text, 'ko', function (data) {
+                $('.floating-box').css('opacity', 1.0);
                 $('.floating-box .default').html(data.TranslatedText);
             });
             

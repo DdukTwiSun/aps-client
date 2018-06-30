@@ -94,6 +94,7 @@ div > #section2 {
     padding-right: 80px;
     padding-left: 80px;
     min-height: 200px;
+    transition: opacity 0.5s;
 }
 .floating-box .default {
   width: 100%;
@@ -335,4 +336,11 @@ div > #section2 {
     src: url('font/notokr-bold.eot?#iefix') format('embedded-opentype'),
     url('font/notokr-bold.woff2') format('woff2'),
     url('font/notokr-bold.woff') format('woff');
+}
+
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
 }
