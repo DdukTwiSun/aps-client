@@ -207,7 +207,7 @@ div > #section2 {
     margin: auto;
     bottom: -130px;
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: opacity 0.5s, transform 0.3s;
 }
 
 .ocr.activated {
