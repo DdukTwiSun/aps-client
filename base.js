@@ -113,7 +113,7 @@ function makeImage(){
             $('#ocr-textarea').val(ocr.text);
             //$('.floating-box').html(ocr.text);
             translate(ocr.text, 'ko', function (data) {
-                $('.floating-box').html(data.TranslatedText);
+                $('.floating-box .default').html(data.TranslatedText);
             });
             
         });
@@ -139,7 +139,7 @@ $(document).ready(function(){
 
     intervalId = setTimeout(() => {
       translate($('#ocr-textarea').val(), 'ko', function (data) {
-        $('.floating-box').html(data.TranslatedText);
+        $('.floating-box .default').html(data.TranslatedText);
       });
 
     }, 500);
