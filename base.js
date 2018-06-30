@@ -112,6 +112,8 @@ function makeImage(){
 
             $('#ocr-textarea').val(ocr.text);
             //$('.floating-box').html(ocr.text);
+            $(".ocr").removeClass('clicked');
+            $('.ocr').addClass('activated');
             translate(ocr.text, 'ko', function (data) {
                 $('.floating-box .default').html(data.TranslatedText);
             });
@@ -129,7 +131,7 @@ function makeImage(){
 
 $(window).resize(makeImage);
 $(document).ready(function(){
-    makeImage();
+  makeImage();
 
   let intervalId = null;
   $("#ocr-textarea").on('change keyup paste', () => {
@@ -143,6 +145,11 @@ $(document).ready(function(){
       });
 
     }, 500);
+
+  });
+
+  $(".ocr").on("click", () => {
+    $(".ocr").addClass("clicked");
 
   });
 
