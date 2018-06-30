@@ -79,7 +79,6 @@ div > #section2 {
 
 .floating-box {
     font-family: NotoKrL, serif;
-    margin: 150px 100px 5px;
     padding: 3px;
     width: auto;
     line-height: 1.65em;
@@ -89,12 +88,16 @@ div > #section2 {
     width: 38%;
     border: 5px solid greenyellow;
     position: fixed;*/
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-bottom: 100px;
 }
-.floating-box a {
-    font-size: 13pt;
+.floating-box span {
+    font-size: 15pt;
+    opacity: 0.9;
     display: block;
     margin: 0 0.5em;
-    color: black;
 }
 #navbar {
     background-color: rgba(000, 195, 255, 1);
