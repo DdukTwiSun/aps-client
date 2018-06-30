@@ -60,11 +60,11 @@ div > #section2 {
 }
 
 .annotation.selected {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(246, 222, 15, 0.2);
 }
 
 .annotation:hover {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(246, 222, 15, 0.3);
 }
 
 #section1 img{
